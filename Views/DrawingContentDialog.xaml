@@ -1,0 +1,34 @@
+﻿<ContentDialog
+    x:Class="MNIST_Demo.Views.DrawingContentDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MNIST_Demo.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Bitte I oder 0 zeichnen"
+    PrimaryButtonText="Ok"
+    SecondaryButtonText="Abbrechen"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick"
+    Width="600"
+    Height="600">    
+
+    <Grid Width="400" Height="400">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid x:Name="UxInkGrid" Grid.Row="0" Background="Black" Margin="10">
+            <InkCanvas x:Name="UxInkCanvas"></InkCanvas>
+        </Grid>
+        <TextBlock x:Name="UxTestTextBlock" Grid.Row="1" HorizontalAlignment="Center" Text="Test" Margin="5"></TextBlock>
+        <StackPanel Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal">
+            
+            <Button x:Name="UxConfirmButton" Content="Check" Margin="5" Click="UxConfirmButton_Click"/>
+            <Button x:Name="UxClearButton" Content="Clear" Margin="5" Click="UxClearButton_Click"></Button>
+        </StackPanel>
+    </Grid>
+        
+
+</ContentDialog>

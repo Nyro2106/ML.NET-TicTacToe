@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MNIST_Demo.Views;
+using System;
 using Windows.Foundation;
 using Windows.Storage;
 using Windows.UI.Popups;
@@ -70,6 +71,11 @@ namespace MNIST_Demo
     {
       inkCanvas.InkPresenter.StrokeContainer.Clear();
       numberLabel.Text = "";
+    }
+
+    private void UxOpenTicTacToeButton_Click(object sender, RoutedEventArgs e)
+    {
+      this.Frame.Navigate(typeof(TicTacToePage));
     }
   }
 }

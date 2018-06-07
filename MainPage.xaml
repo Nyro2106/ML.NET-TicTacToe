@@ -5,7 +5,7 @@
     xmlns:local="using:MNIST_Demo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Width="608" Height="496">
+    mc:Ignorable="d" Width="600" Height="550" Background="White">
 
     <Grid
         x:Name="parentGrid"
@@ -53,11 +53,25 @@
             Margin="25,261,0,0" 
             VerticalAlignment="Top"
             HorizontalAlignment="Left"/>
-        <TextBlock Name="numberLabel"
-            FontSize="100" 
+        <Button 
+            x:Name="UxOpenTicTacToeButton"
+            Content="Start Tic Tac Toe"            
+            Click="UxOpenTicTacToeButton_Click"
+            FontSize="18"
             Grid.Column="1" 
-            Margin="60,0,183,192" 
-            Text="" VerticalAlignment="Bottom" Grid.Row="1"/>
+            Grid.Row="1" 
+            Height="75" 
+            Width="150"
+            Margin="25,70,0,0" 
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"/>
+
+
+        <TextBlock Name="numberLabel"
+            FontSize="30" 
+            Grid.Column="1"                  
+            Margin="25,0,169,275" 
+            Text="" VerticalAlignment="Bottom" Grid.Row="1" Height="50"/>
         <Border BorderThickness="4"
             BorderBrush="Black"
             Margin="0,0,0,0"
