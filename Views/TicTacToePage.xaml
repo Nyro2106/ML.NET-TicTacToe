@@ -25,12 +25,13 @@
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>
-            <AppBarButton x:Name="UxClearAppBarButton" Icon="NewWindow" Label="Neues Spiel" Click="UxClearAppBarButton_Click"/>
+            <AppBarButton x:Name="UxClearAppBarButton" Icon="Play" Label="Neues Spiel" Click="UxClearAppBarButton_Click"/>
+            <AppBarButton x:Name="UxBackButton" Icon="Home" Label="Zurück zur Startseite" Click="UxBackButton_Click"></AppBarButton>
         </CommandBar>
         
-        <TextBlock x:Name="UxStatusTextBlock" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Spieler 1 ist dran" TextWrapping="Wrap" Margin="0,0,0,12"/>
+        <TextBlock x:Name="UxStatusTextBlock" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Text="Spieler '0' ist dran" TextWrapping="Wrap" Margin="0,0,0,12"/>
         
-        <Grid x:Name="UxGameGrid" Grid.Column="1" Grid.Row="1" Background="#FFECECEC" BorderBrush="#FF383838" BorderThickness="1,1,1,1" >
+        <Grid x:Name="UxGameGrid" Grid.Column="1" Grid.Row="1" Background="White" BorderBrush="#FF383838" BorderThickness="1,1,1,1" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="2"/>
@@ -72,7 +73,7 @@
             <InkCanvas x:Name="UxInkCanvas44" Grid.Column="4" Grid.Row="4" Margin="3,3,3,3"/>-->
 
         </Grid>
-        <Button x:Name="UxNextPlayerButton" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Content="Nächster Spieler" Click="UxNextPlayerButton_Click"></Button>
+        <!--<Button x:Name="UxNextPlayerButton" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Content="Nächster Spieler" Click="UxNextPlayerButton_Click"></Button>-->
 
 
     </Grid>

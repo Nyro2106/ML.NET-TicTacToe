@@ -1,19 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
-using Windows.UI.Xaml.Navigation;
 
 // The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,8 +16,8 @@ namespace MNIST_Demo.Views
     private MNISTModel ModelGen = new MNISTModel();
     private MNISTModelInput ModelInput = new MNISTModelInput();
     private MNISTModelOutput ModelOutput = new MNISTModelOutput();
-    public Image CurrentDrawing { get; set; } = new Image();
     internal int Result = -1;
+    internal static InkCanvas CurrentInkCanvas { get; set; }
 
     private RenderTargetBitmap renderBitmap = new RenderTargetBitmap();
 
@@ -93,7 +83,7 @@ namespace MNIST_Demo.Views
       switch (Result)
       {
         case 0:
-          this.UxTestTextBlock.Text = $"0 erkannt";
+          this.UxTestTextBlock.Text = $"0 erkannt";          
           break;
         case 1:
           this.UxTestTextBlock.Text = $"1 erkannt";

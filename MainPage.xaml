@@ -5,7 +5,7 @@
     xmlns:local="using:MNIST_Demo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Width="600" Height="550" Background="White">
+    mc:Ignorable="d" Width="800" Height="650" Background="White">
 
     <Grid
         x:Name="parentGrid"
