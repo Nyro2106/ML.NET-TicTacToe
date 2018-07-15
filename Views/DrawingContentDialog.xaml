@@ -25,8 +25,9 @@
         <TextBlock x:Name="UxTestTextBlock" Grid.Row="1" HorizontalAlignment="Center" Text="" Margin="5"></TextBlock>
         <StackPanel Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal">
             
-            <Button x:Name="UxConfirmButton" Content="Check" Margin="5" Click="UxConfirmButton_Click"/>
-            <Button x:Name="UxClearButton" Content="Clear" Margin="5" Click="UxClearButton_Click"></Button>
+            <Button x:Name="UxConfirmButton" Content="Überprüfen" Margin="5" Click="UxConfirmButton_Click"/>
+            <Button x:Name="UxClearButton" Content="Box leeren" Margin="5" Click="UxClearButton_Click"></Button>
+            <Button x:Name="UxStartSpeechRecognition" Content="Starte Spracherkennung" Click="UxStartSpeechRecognition_Click"></Button>
         </StackPanel>
     </Grid>
         

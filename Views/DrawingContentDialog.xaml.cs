@@ -34,7 +34,7 @@ namespace MNIST_Demo.Views
             IgnoreTilt = true,
           }
       );
-      LoadModel();
+      LoadModel();      
     }
 
     private async void LoadModel()
@@ -102,5 +102,38 @@ namespace MNIST_Demo.Views
       this.UxInkCanvas.InkPresenter.StrokeContainer.Clear();
       this.Result = -1;
     }
+
+    private async void UxStartSpeechRecognition_Click(object sender, RoutedEventArgs e)
+    {
+
+        // Create an instance of SpeechRecognizer.
+        var speechRecognizer = new Windows.Media.SpeechRecognition.SpeechRecognizer();
+
+        // Compile the dictation grammar by default.
+        await speechRecognizer.CompileConstraintsAsync();
+
+        // Start recognition.
+        Windows.Media.SpeechRecognition.SpeechRecognitionResult speechRecognitionResult = await speechRecognizer.RecognizeWithUIAsync();
+
+      switch (speechRecognitionResult.Text.ToLower())
+      {
+        case "eins":
+        case "1":
+          this.Result = 1;
+          break;
+        case "null":
+        case "0":
+          this.Result = 0;
+          break;
+        default:
+          this.Result = -1;
+          break;
+      }
+
+      // Do something with the recognition result.
+      var messageDialog = new Windows.UI.Popups.MessageDialog(speechRecognitionResult.Text, "Text Gesprochen. Ok drücken zum Fortfahren");
+        await messageDialog.ShowAsync();
+    }
+
   }
 }
