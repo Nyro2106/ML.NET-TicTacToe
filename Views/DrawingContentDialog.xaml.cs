@@ -131,8 +131,16 @@ namespace MNIST_Demo.Views
       }
 
       // Do something with the recognition result.
-      var messageDialog = new Windows.UI.Popups.MessageDialog(speechRecognitionResult.Text, "Text Gesprochen. Ok drücken zum Fortfahren");
+      if (speechRecognitionResult.Text.ToLower() == "eins" || speechRecognitionResult.Text.ToLower() == "1" || speechRecognitionResult.Text.ToLower() == "null" || speechRecognitionResult.Text.ToLower() == "0")
+      {
+        var messageDialog = new Windows.UI.Popups.MessageDialog($"Ok drücken zum Fortfahren", $"'{speechRecognitionResult.Text}' erkannt");
+        await messageDialog.ShowAsync(); 
+      }
+      else
+      {
+        var messageDialog = new Windows.UI.Popups.MessageDialog($"'{speechRecognitionResult.Text}' erkannt.", "Ungültige Eingabe, bitte nochmal versuchen.");
         await messageDialog.ShowAsync();
+      }
     }
 
   }
