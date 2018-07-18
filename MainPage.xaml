@@ -19,19 +19,19 @@
             <ColumnDefinition Width="336" />
         </Grid.ColumnDefinitions>
 
-        <TextBlock Text="Handwritten Digit:"
+        <TextBlock Text="Zahl:"
                FontSize="36 "
                VerticalAlignment="Center"
                Grid.Row="0"
                Grid.Column="0" />
-        <TextBlock Text="Result:"
+        <TextBlock Text="Ergebnis:"
                FontSize="36"
                VerticalAlignment="Center"
                Grid.Row="0"
                Grid.Column="1" />
         <Button 
             Name="recognizeButton"
-            Content="Recognize"
+            Content="Erkennen"
             Click="recognizeButton_Click"
             FontSize="26"
             Grid.Column="1" 
@@ -43,7 +43,7 @@
             HorizontalAlignment="Left"/>
         <Button 
             Name="clearButton"
-            Content="Clear Digit"
+            Content="Box leeren"
             Click="clearButton_Click"
             FontSize="26"
             Grid.Column="1" 
